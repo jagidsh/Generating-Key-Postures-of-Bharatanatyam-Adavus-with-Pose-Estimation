@@ -4,6 +4,10 @@ pip install -r requirements.txt
 
 python train.py
 
+## 🖼️ Results
+
+### Generated Samples
+![Sample](assets/generated_keyposture_diffusion.png)
 
 If you find our code useful for your research, please cite our paper
 ```
