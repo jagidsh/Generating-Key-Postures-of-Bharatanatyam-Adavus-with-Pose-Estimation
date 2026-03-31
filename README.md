@@ -4,6 +4,8 @@ pip install -r requirements.txt
 
 python train.py
 
+
+If you use this work, please cite:
 @inproceedings{kamble2025bharatanatyam,
   title={Generating Key Postures of Bharatanatyam Adavus with Pose Estimation},
   author={Kamble, Jagadish and Mukhopadhyay, Jayanta and Roy, Debaditya and Das, Partha Pratim},
