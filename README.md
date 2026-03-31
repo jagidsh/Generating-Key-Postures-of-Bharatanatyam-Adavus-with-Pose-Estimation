@@ -9,7 +9,7 @@ python train.py
 ### Generated Samples
 ![Sample](assets/generated_keyposture_diffusion.png)
 
-If you find our code useful for your research, please cite our paper
+If you find it is useful for your research, please cite our paper
 ```
 @inproceedings{kamble2025bharatanatyam,
  title={Generating Key Postures of Bharatanatyam Adavus with Pose Estimation},
