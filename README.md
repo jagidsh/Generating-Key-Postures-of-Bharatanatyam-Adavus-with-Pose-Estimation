@@ -1,4 +1,3 @@
-This work is based on the work described in this paper: Ho, J., Jain, A., & Abbeel, P. (2020). Denoising Diffusion Probabilistic Models. ArXiv. /abs/2006.11239
 ## Setup
 
 pip install -r requirements.txt
