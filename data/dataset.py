@@ -13,7 +13,7 @@ data_path = "./keyposture_dataset"
 
 # Original label mapping
 label_mapping = [name for name in os.listdir(data_path) 
-         if os.path.isdir(os.path.join(data_path, name))][:28]# Sort alphabetically (as ImageFolder does)
+         if os.path.isdir(os.path.join(data_path, name))][:20]# Sort alphabetically (as ImageFolder does)
 sorted_label_mapping = sorted(label_mapping)
 label_to_index = {label: idx for idx, label in enumerate(sorted_label_mapping)}
 print("Alphabetically Sorted Label Mapping:", label_to_index)
@@ -67,8 +67,7 @@ class BharatnatyamDataset(Dataset):
 
         return img, torch.tensor(label), keypoints
         
-allowed_folders = ["3", "5", "8", "11", "27", "44", "45", "46", "47", "48", "49", "59", "60", "77", "79", "85", "87", "100", "103", "153"]  # Specify which 
-dataset = BharatnatyamDataset(root_dir=data_path,transform=transform,allowed_folders=allowed_folders,label_to_index=label_to_index,kp_cache_dir="./kp_cache")  
+dataset = BharatnatyamDataset(root_dir=data_path,transform=transform,allowed_folders=label_mapping,label_to_index=label_to_index,kp_cache_dir="./kp_cache")  
 
 
 # Step 1: Split dataset into training and validation sets
