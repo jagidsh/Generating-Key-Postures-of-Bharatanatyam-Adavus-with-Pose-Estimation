@@ -12,8 +12,8 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 data_path = "./keyposture_dataset"
 
 # Original label mapping
-label_mapping = ["3", "5", "8", "11", "27", "44", "45", "46", "47", "48", "49", "59", "60", "77", "79", "85", "87", "100", "103", "153"]
-# Sort alphabetically (as ImageFolder does)
+label_mapping = [name for name in os.listdir(data_path) 
+         if os.path.isdir(os.path.join(data_path, name))][:28]# Sort alphabetically (as ImageFolder does)
 sorted_label_mapping = sorted(label_mapping)
 label_to_index = {label: idx for idx, label in enumerate(sorted_label_mapping)}
 print("Alphabetically Sorted Label Mapping:", label_to_index)
