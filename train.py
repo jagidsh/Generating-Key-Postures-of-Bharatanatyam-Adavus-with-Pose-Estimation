@@ -155,7 +155,6 @@ def train_adavu():
                   0.5 * pose_consistency_loss
             )
             # ---- Total Loss ----
-            total_loss = loss_diff + 1.0 * kp_loss
 
             optim.zero_grad()
             total_loss.backward()
